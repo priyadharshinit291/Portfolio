@@ -1,0 +1,52 @@
+.skills__card {
+  padding: 28px 24px;
+}
+
+.skills__card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.skills__card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: var(--grad-primary);
+  color: #fff;
+  font-size: 16px;
+}
+
+.skills__card-head h3 {
+  font-size: 15.5px;
+}
+
+.skills__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  font-size: 13px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: default;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.skills__badge:hover {
+  border-color: var(--purple-soft);
+  background: var(--grad-primary);
+  color: #fff;
+}

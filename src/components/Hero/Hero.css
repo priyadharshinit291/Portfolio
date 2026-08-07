@@ -1,0 +1,204 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+.hero__orbs {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  animation: float 9s ease-in-out infinite;
+}
+
+.orb--blue {
+  width: 420px;
+  height: 420px;
+  background: var(--blue);
+  top: -80px;
+  right: 8%;
+}
+
+.orb--purple {
+  width: 380px;
+  height: 380px;
+  background: var(--purple);
+  bottom: -60px;
+  left: 4%;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-30px) translateX(20px); }
+}
+
+.hero__grid {
+  align-items: center;
+}
+
+.hero__name {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 16px 0 10px;
+}
+
+.hero__role {
+  font-family: var(--font-mono);
+  font-size: clamp(16px, 2.2vw, 21px);
+  color: var(--blue-soft);
+  min-height: 30px;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.hero__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--purple-soft);
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: blink 0.9s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero__desc {
+  max-width: 520px;
+  font-size: 16px;
+  margin-bottom: 34px;
+}
+
+.hero__actions {
+  margin-bottom: 34px;
+}
+
+.hero__socials {
+  margin: 0;
+}
+
+.hero__social-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  transition: all 0.3s var(--ease);
+}
+
+.hero__social-icon:hover {
+  color: #fff;
+  border-color: var(--purple-soft);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(155, 92, 255, 0.25);
+}
+
+.hero__portrait {
+  position: relative;
+  justify-self: center;
+  width: min(360px, 80vw);
+  aspect-ratio: 1;
+}
+
+.hero__portrait-ring {
+  position: absolute;
+  inset: -18px;
+  border-radius: 32px;
+  background: var(--grad-primary);
+  opacity: 0.35;
+  filter: blur(30px);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.04); }
+}
+
+.hero__portrait-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.hero__portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 28px;
+}
+
+.hero__float {
+  position: absolute;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--cyan);
+  animation: floaty 5s ease-in-out infinite;
+}
+
+.hero__float--1 { top: 6%; right: -6%; animation-delay: 0s; }
+.hero__float--2 { bottom: 14%; left: -8%; color: var(--purple-soft); animation-delay: -1.6s; }
+.hero__float--3 { top: 48%; right: -10%; color: var(--blue-soft); animation-delay: -3s; }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.hero__scroll-cue {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  color: var(--text-secondary);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+@media (max-width: 991.98px) {
+  .hero__grid {
+    text-align: center;
+  }
+  .hero__desc { margin-left: auto; margin-right: auto; }
+  .hero__actions, .hero__socials { justify-content: center; }
+  .hero__portrait { order: -1; margin-bottom: 20px; width: min(260px, 60vw); }
+  .eyebrow { justify-content: center; }
+}

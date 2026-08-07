@@ -1,0 +1,137 @@
+.about__main {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.about__block {
+  display: flex;
+  gap: 18px;
+}
+
+.about__block h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.about__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--grad-primary);
+  color: #fff;
+  font-size: 18px;
+}
+
+.about__side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.about__card {
+  padding: 28px;
+}
+
+.about__card h3 {
+  font-size: 16px;
+  margin: 14px 0 16px;
+}
+
+.about__edu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__edu-list li {
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.about__edu-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about__edu-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.about__edu-degree {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.about__edu-period {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--blue-soft);
+  white-space: nowrap;
+}
+
+.about__edu-inst {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.about__edu-detail {
+  font-size: 12.5px;
+  color: var(--purple-soft);
+  font-family: var(--font-mono);
+}
+
+.about__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.about__strengths-title {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.about__strength {
+  padding: 22px 20px;
+}
+
+.about__strength-num {
+  font-family: var(--font-mono);
+  color: var(--purple-soft);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about__strength p {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .about__main { padding: 26px; }
+}

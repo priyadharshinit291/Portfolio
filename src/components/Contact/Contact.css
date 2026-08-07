@@ -1,0 +1,96 @@
+.contact__info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact__info-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 12px;
+  border-radius: 14px;
+  transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.contact__info-row:hover {
+  background: var(--glass-hover);
+  transform: translateX(4px);
+}
+
+.contact__info-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--grad-primary);
+  color: #fff;
+}
+
+.contact__info-label {
+  display: block;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.contact__info-value {
+  display: block;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-top: 2px;
+  word-break: break-word;
+}
+
+.contact__form-wrap {
+  padding: 32px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.contact__field label {
+  font-size: 12.5px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+/* Override Bootstrap's default .form-control to match the dark glass theme */
+.contact__field .form-control {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 13px 15px;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.contact__field .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.contact__field .form-control:focus {
+  background: rgba(255, 255, 255, 0.04);
+  outline: none;
+  border-color: var(--purple-soft);
+  box-shadow: 0 0 0 3px rgba(155, 92, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.contact__status {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: var(--cyan);
+}
