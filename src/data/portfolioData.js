@@ -100,7 +100,7 @@ export const projects = [
     date: "July 2026",
     org: "Vinsup Skill Academy",
     github: "https://github.com/priyadharshinit291",
-    demo: "#",
+    demo: "https://client-assignment-management-system.vercel.app/login",
     color: "linear-gradient(135deg,#4f7cff,#9b5cff)",
   },
   {
