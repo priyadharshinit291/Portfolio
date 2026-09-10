@@ -141,7 +141,10 @@ export const certifications = [
     org: "Vinsup Skill Academy",
     detail:
       "Completed hands-on training in MongoDB, Express.js, React.js and Node.js — covering RESTful APIs, JWT authentication, and full-stack application development (2026).",
-    link: "#",
+    images: [
+      { src: "/images/certificates/VS70692.pdf", caption: "Course completion certificate" },
+      { src: "/images/certificates/Priyadharshini Internship.pdf", caption: "Internship certificate" },
+    ],
   },
   {
     name: "Certificate of Publication — ICAMDSCC 2026",
