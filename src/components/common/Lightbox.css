@@ -73,6 +73,14 @@
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-card);
 }
+.lightbox__pdf {
+  width: min(760px, 86vw);
+  height: 70vh;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-card);
+  background: #fff;
+}
 
 .lightbox__caption {
   color: var(--text-secondary);
