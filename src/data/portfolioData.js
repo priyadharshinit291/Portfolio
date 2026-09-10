@@ -15,7 +15,7 @@ export const personal = {
   email: "priyadharshinit291@gmail.com",
   github: "https://github.com/priyadharshinit291",
   linkedin: "https://www.linkedin.com/in/priyadharshini-t-54ab6336a",
-  resumePdf: "/Resume/Resume_priyadharshini_T_.pdf",
+ resumePdf: "/resume/Resume_priyadharshini_T_.pdf",
   languages: ["English", "Tamil"],
   strengths: [
     "Fast learner & adaptable to new stacks",
