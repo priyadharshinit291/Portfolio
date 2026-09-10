@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiAward, FiExternalLink } from "react-icons/fi";
+import { FiAward, FiExternalLink, FiFileText } from "react-icons/fi";
 import Reveal from "../common/Reveal";
 import MotionCard from "../common/MotionCard";
 import Lightbox from "../common/Lightbox";
@@ -26,15 +26,24 @@ export default function Certifications() {
             <div key={c.name} className="col-12 col-md-6">
               <Reveal direction="up" delay={i * 0.1} className="h-100">
                 <MotionCard className="glass-card certs__card h-100">
-                  {c.images && c.images[0] ? (
-                    <button
-                      className="certs__media certs__media--img"
-                      onClick={() => setActive(c.images)}
-                      aria-label={`View ${c.name}`}
-                    >
-                      <img src={c.images[0].src} alt={c.name} />
-                    </button>
-                  ) : (
+                 
+{c.images && c.images[0] && !c.images[0].src.toLowerCase().endsWith(".pdf") ? (
+  <button
+    className="certs__media certs__media--img"
+    onClick={() => setActive(c.images)}
+    aria-label={`View ${c.name}`}
+  >
+    <img src={c.images[0].src} alt={c.name} />
+  </button>
+) : c.images && c.images[0] ? (
+  <button
+    className="certs__media"
+    onClick={() => setActive(c.images)}
+    aria-label={`View ${c.name}`}
+  >
+    <FiFileText size={34} />
+  </button>
+) : (
                     <motion.div
                       className="certs__media"
                       whileHover={{ rotate: [0, -8, 8, 0] }}
