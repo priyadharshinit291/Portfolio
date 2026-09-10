@@ -64,7 +64,19 @@ export default function Lightbox({ images, startIndex = 0, onClose }) {
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
           onClick={(e) => e.stopPropagation()}
         >
-          <img src={current.src} alt={current.caption || "Preview"} />
+          {current.src.toLowerCase().endsWith(".pdf") ? (
+            <object data={current.src} type="application/pdf" className="lightbox__pdf">
+              <p>
+                Unable to preview this PDF inline.{" "}
+                <a href={current.src} target="_blank" rel="noopener noreferrer">
+                  Open it in a new tab
+                </a>
+                .
+              </p>
+            </object>
+          ) : (
+            <img src={current.src} alt={current.caption || "Preview"} />
+          )}
           {current.caption && <p className="lightbox__caption">{current.caption}</p>}
           {images.length > 1 && (
             <span className="lightbox__count">
